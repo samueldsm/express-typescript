@@ -47,7 +47,7 @@ router.post('/', (req, res) => {
         res.json(addedDiaryEntry);
     }
     catch (e) {
-        res.status(400).send("Error 400");
+        res.status(400).send(e.message);
     }
 });
 exports.default = router;
